@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box1 {
+				background: #ff0000;
+			}
+			
+			#box2 {
+				background: #fff022;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="box1">
+				this is a div
+		</div>
+		
+		AAAAAA<span id="box2"> this is a span </span>BBBBBB
+		
+		<br />
+		
+		<input type="button" id="showDiv1" value="show div btn" />
+		<input type="button" id="showSpan1" value="show span btn" />
+		
+		<hr />
+		
+		<input type="button" id="showDiv2" value="show div btn" />
+		<input type="button" id="showSpan2" value="show span btn" />
+		
+		<hr />
+		
+		<input type="button" id="hideAll" value="hide all" />
+		
+		<script type="text/javascript">
+			var obox1 = document.getElementById("box1");
+			var obox2 = document.getElementById("box2");
+			
+			var oHideAll = document.getElementById("hideAll");
+			
+			var oShowDiv1 = document.getElementById("showDiv1"),
+				oSpan1 = document.getElementById("showSpan1"),
+				oShowDiv2 = document.getElementById("showDiv2"),
+				oSpan2 = document.getElementById("showSpan2");
+			
+			obox1.style.display = 'none';
+			obox2.style.display = 'none';
+			
+			oShowDiv1.onclick = function() {
+				obox1.style.display = 'block';
+			}
+			
+			oSpan1.onclick = function() {
+				obox2.style.display = 'block';
+			}
+			
+			oShowDiv2.onclick = function() {
+				obox1.style.display = '';
+			}
+			
+			oSpan2.onclick = function() {
+				obox2.style.display = '';
+			}
+			
+			oHideAll.onclick = function() {
+				obox1.style.display = 'none';
+				obox2.style.display = 'none';
+			}
+			
+		</script>
+	</body>
+</html>
