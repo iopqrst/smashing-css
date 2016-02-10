@@ -28,6 +28,22 @@
 				text-decoration: none;
 				color: #090215;
 			}
+			
+			li.sub {
+				position: relative;
+			}
+			
+			li.sub > ul {
+				display: none;
+			}
+			
+			li.sub:hover ul{  /*别忘了ie6不支持li的hover*/
+				display: block;
+				
+				position: absolute;
+				top:0;
+				left:90%;
+			}
 		</style>
 	</head>
 
